@@ -1,5 +1,12 @@
 # Hotel Management System (Java)
 
+<!-- BrandCloud:readme-standard -->
+[![Maintained](https://img.shields.io/badge/Maintained-yes-brightgreen.svg)](#)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Showcase](https://img.shields.io/badge/Portfolio-Showcase-blue.svg)](#)
+
+_Part of the `sakib-maho` project showcase series with consistent documentation and quality standards._
+
 Refactored console-based hotel management application built with clean package structure, service layer, persistence, and automated tests.
 
 ## Highlights
