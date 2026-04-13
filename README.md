@@ -1,16 +1,70 @@
-# Hotel-Management-OOP-Project
+# Hotel Management System (Java)
 
-This is a Hotel Management tool which can be used to manage
-activites like storing customer details, booking rooms of four different types, ordering food
-for particular rooms, unbooking rooms and showing the bill. It can also be used to see
-different room features and room availibility. It is a menu driven program and it runs until
-the user exits. File handling has been used to store the current status of the
-hotel(customer details, booked rooms, food ordered) in a file once the program exits so
-that when we restart the program, the old details are not lost. The program reads the file
-when it restarts to know the previous status of the hotel. Writing of file has been done in a
-separate thread as it can be done parallely. User defined exception is thrown if the user
-tries to book an already allotted room. Exception handling is properly done to deal with any
-kind of unexpected exception.
-##### Topics Covered-  
-Classes and Objects, Inheritance, File Handling with Objects, ArrayList, implementing
-Interface, User defined exception and Exception handling.
+Refactored console-based hotel management application built with clean package structure, service layer, persistence, and automated tests.
+
+## Highlights
+
+- Maven project structure (`src/main`, `src/test`)
+- Domain-driven model classes (`Room`, `Guest`, `FoodOrder`, `RoomType`)
+- Service layer for booking, food ordering, checkout, and availability
+- Custom exceptions for room availability and lookup failures
+- Persistence layer using Java serialization (`backup.dat`)
+- JUnit 5 tests for critical booking and billing flows
+
+## Features
+
+- Manage four room categories:
+  - Luxury Double
+  - Deluxe Double
+  - Luxury Single
+  - Deluxe Single
+- Book rooms with guest details
+- Order food per booked room
+- Calculate final bill with room + food charges
+- Check room availability by category
+- Persist data between runs
+
+## Tech Stack
+
+- Java 17
+- Maven
+- JUnit 5
+
+## Project Structure
+
+```text
+.
+├── pom.xml
+├── src/main/java/com/sakib/hotel/
+│   ├── Main.java
+│   ├── exception/
+│   ├── model/
+│   ├── persistence/
+│   ├── service/
+│   └── util/
+└── src/test/java/com/sakib/hotel/service/
+```
+
+## Run Locally
+
+```bash
+git clone https://github.com/sakib-maho/Hotel-Management-system.git
+cd Hotel-Management-system
+mvn clean package
+java -cp target/classes com.sakib.hotel.Main
+```
+
+## Run Tests
+
+```bash
+mvn test
+```
+
+## Data Persistence
+
+- Runtime data is saved to `backup.dat` on exit.
+- On next startup, previous state is automatically loaded if backup exists.
+
+## License
+
+MIT License - see [LICENSE](LICENSE).

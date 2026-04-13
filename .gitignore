@@ -33,3 +33,6 @@ venv/
 dist/
 build/
 *.egg-info/
+target/
+*.class
+backup.dat
