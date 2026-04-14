@@ -1,15 +1,8 @@
 # Hotel Management System (Java)
 
-<!-- BrandCloud:readme-standard -->
-[![Maintained](https://img.shields.io/badge/Maintained-yes-brightgreen.svg)](#)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Showcase](https://img.shields.io/badge/Portfolio-Showcase-blue.svg)](#)
-
-_Part of the `sakib-maho` project showcase series with consistent documentation and quality standards._
-
 Refactored console-based hotel management application built with clean package structure, service layer, persistence, and automated tests.
 
-## Features
+## Overview
 
 - Maven project structure (`src/main`, `src/test`)
 - Domain-driven model classes (`Room`, `Guest`, `FoodOrder`, `RoomType`)
@@ -17,25 +10,6 @@ Refactored console-based hotel management application built with clean package s
 - Custom exceptions for room availability and lookup failures
 - Persistence layer using Java serialization (`backup.dat`)
 - JUnit 5 tests for critical booking and billing flows
-
-## Quick Start
-
-```bash
-git clone https://github.com/sakib-maho/Hotel-Management-system.git
-cd Hotel-Management-system
-mvn clean package
-java -cp target/classes com.sakib.hotel.Main
-```
-
-## Tests
-
-```bash
-mvn test
-```
-
-## License
-
-MIT License - see [LICENSE](LICENSE).
 
 ## Features
 
@@ -71,7 +45,26 @@ MIT License - see [LICENSE](LICENSE).
 └── src/test/java/com/sakib/hotel/service/
 ```
 
+## Run Locally
+
+```bash
+git clone https://github.com/sakib-maho/Hotel-Management-system.git
+cd Hotel-Management-system
+mvn clean package
+java -cp target/classes com.sakib.hotel.Main
+```
+
+## Run Tests
+
+```bash
+mvn test
+```
+
 ## Data Persistence
 
 - Runtime data is saved to `backup.dat` on exit.
 - On next startup, previous state is automatically loaded if backup exists.
+
+## License
+
+MIT License - see [LICENSE](LICENSE).
